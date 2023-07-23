@@ -12,9 +12,8 @@ MESSAGE = "message"
 MESSAGES = "messages"
 
 app = flask.Flask(__name__)
-messages = collections.deque()
-app.config['SECRET_KEY'] = 'secret!'
 socketio = flask_socketio.SocketIO(app)
+messages = collections.deque()
 
 @app.route(INDEX_PAGE)
 def index():
