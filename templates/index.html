@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Messenger </title>
+        <link rel = "stylesheet" href = "static/index.css">
+    </head>
+    
+    <body>
+        <h1> Messenger </h1>
+        
+        <form id = "form" method = "post" onkeyup = "checkKey(event)">
+            <input id = "name" name = "name" placeholder = "Username">
+            <input id = "message" name = "message" placeholder = "Message">
+            <input type = "button" value = "Send" onclick = "push()">
+        </form>
+        
+        <br>
+        
+        <table id = "table">
+            <tr>
+                <th class = "left"> Time </th>
+                <th class = "middle"> Name </th>
+                <th class = "right"> Message </th>
+            </tr>
+        </table>
+        
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"
+            integrity="sha512-q/dWJ3kcmjBLU4Qc47E4A9kTB4m3wuTY7vkFJDTZKjTs8jhyGQnaUrxa0Ytd0ssMZhbNua9hE+E7Qv1j+DyZwA=="
+            crossorigin="anonymous"
+        ></script>
+        
+        <script src = "static/index.js"></script>
+    </body>
+</html>
